@@ -16,10 +16,10 @@ dl, dd, ol, ul, figure {
  */
 body {
   font-family: "Lato", "Open Sans", Helvetica, Arial, sans-serif !important;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.6em;
   font-weight: 300;
-  color: #111;
+  color: #000000;
   background-color: #f9f9f9;
   -webkit-text-size-adjust: 100%; }
 
@@ -36,8 +36,8 @@ ul, ol, dl, figure {
  */
 .container {
   min-height: 100%;
-  max-width: -webkit-calc(1000px - (15px * 2));
-  max-width: calc(1000px - (15px * 2));
+  max-width: -webkit-calc(800px - (15px * 2));
+  max-width: calc(800px - (15px * 2));
   margin-right: auto;
   margin-left: auto;
   padding-right: 15px;
@@ -82,7 +82,7 @@ figure > img {
   display: block; }
 
 figcaption {
-  font-size: 14px; }
+  font-size: 12.25px; }
 
 /**
  * Lists
@@ -130,7 +130,7 @@ blockquote {
   margin: 14px 0;
   border: 2px dashed #d0dfda;
   border-radius: 5px;
-  color: #828282;
+  color: #111111;
   font-size: 18px;
   background: #f9f9f9; }
   blockquote:hover {
@@ -162,16 +162,16 @@ pre {
  * Wrapper
  */
 .wrapper {
-  max-width: -webkit-calc(960px - (15px * 2));
-  max-width: calc(960px - (15px * 2));
+  max-width: -webkit-calc(750px - (15px * 2));
+  max-width: calc(750px - (15px * 2));
   margin-right: auto;
   margin-left: auto;
   padding-right: 15px;
   padding-left: 15px; }
   @media screen and (max-width: 800px) {
     .wrapper {
-      max-width: -webkit-calc(960px - (15px));
-      max-width: calc(960px - (15px));
+      max-width: -webkit-calc(750px - (15px));
+      max-width: calc(750px - (15px));
       padding-right: 7.5px;
       padding-left: 7.5px; } }
 
@@ -192,7 +192,7 @@ pre {
   height: 16px;
   vertical-align: middle; }
   .icon > svg path {
-    fill: #828282; }
+    fill: #111111; }
 
 /**
  * Table
@@ -201,7 +201,7 @@ table {
   padding: 0;
   margin-bottom: 5px;
   border-collapse: collapse;
-  font-size: 14px; }
+  font-size: 12.25px; }
 
 table tr {
   border-top: 1px solid #cccccc;
@@ -265,30 +265,30 @@ cite {
   letter-spacing: -1px;
   margin-bottom: 0;
   text-align: center;
-  color: #828282; }
+  color: #111111; }
 
 .site-nav {
   /*float: right;*/
   line-height: 56px;
-  border-top: 1px solid #e8e8e8;
-  border-bottom: 1px solid #e8e8e8; }
+  border-top: 1px solid #777777;
+  border-bottom: 1px solid #777777; }
   .site-nav .menu-icon {
     display: none; }
   .site-nav .page-link {
-    color: #828282;
+    color: #111111;
     line-height: 1.6em;
     margin-left: 10px;
     margin-right: 10px; }
   .site-nav a {
     text-decoration: none; }
     .site-nav a:hover {
-      color: #111;
+      color: #000000;
       text-decoration: none; }
   @media screen and (max-width: 600px) {
     .site-nav {
       position: relative;
       background-color: #f9f9f9;
-      border: 1px solid #e8e8e8;
+      border: 1px solid #777777;
       border-radius: 5px;
       text-align: center; }
       .site-nav .menu-icon {
@@ -299,7 +299,7 @@ cite {
           width: 18px;
           height: 30px; }
           .site-nav .menu-icon > svg path {
-            fill: #424242; }
+            fill: black; }
       .site-nav .trigger {
         clear: both;
         display: none; }
@@ -318,9 +318,9 @@ cite {
   margin: 0 -15px 15px;
   font-size: 14px; }
   .sidebar-module h4 {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
-    color: #424242; }
+    color: black; }
   .sidebar-module li {
     list-style: none; }
 
@@ -331,7 +331,7 @@ cite {
   clear: both;
   text-align: center;
   background-color: #f9f9f9;
-  border-top: 1px solid #e8e8e8;
+  border-top: 1px solid #777777;
   margin: 15px 0;
   padding: 15px 0;
   font-size: 14px; }
@@ -348,8 +348,8 @@ cite {
   font-size: 20px; }
 
 .post-meta {
-  font-size: 14px;
-  color: #828282; }
+  font-size: 12.25px;
+  color: #111111; }
 
 .post-link {
   display: block;
@@ -386,7 +386,7 @@ cite {
   content: "Table of Contents";
   font-weight: 700;
   padding-left: 10px;
-  border-bottom: 5px solid #e8e8e8 !important;
+  border-bottom: 5px solid #777777 !important;
   display: block;
   font-size: 18px; }
 
