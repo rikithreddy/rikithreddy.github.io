@@ -36,8 +36,8 @@ ul, ol, dl, figure {
  */
 .container {
   min-height: 100%;
-  max-width: -webkit-calc(800px - (15px * 2));
-  max-width: calc(800px - (15px * 2));
+  max-width: -webkit-calc(700px - (15px * 2));
+  max-width: calc(700px - (15px * 2));
   margin-right: auto;
   margin-left: auto;
   padding-right: 15px;
@@ -162,16 +162,16 @@ pre {
  * Wrapper
  */
 .wrapper {
-  max-width: -webkit-calc(750px - (15px * 2));
-  max-width: calc(750px - (15px * 2));
+  max-width: -webkit-calc(600px - (15px * 2));
+  max-width: calc(600px - (15px * 2));
   margin-right: auto;
   margin-left: auto;
   padding-right: 15px;
   padding-left: 15px; }
   @media screen and (max-width: 800px) {
     .wrapper {
-      max-width: -webkit-calc(750px - (15px));
-      max-width: calc(750px - (15px));
+      max-width: -webkit-calc(600px - (15px));
+      max-width: calc(600px - (15px));
       padding-right: 7.5px;
       padding-left: 7.5px; } }
 
@@ -269,7 +269,7 @@ cite {
 
 .site-nav {
   /*float: right;*/
-  line-height: 56px;
+  line-height: 50px;
   border-top: 1px solid #777777;
   border-bottom: 1px solid #777777; }
   .site-nav .menu-icon {
@@ -353,7 +353,7 @@ cite {
 
 .post-link {
   display: block;
-  font-size: 38px; }
+  font-size: 25px; }
 
 /**
  * Posts
@@ -365,7 +365,7 @@ cite {
     font-style: normal; }
 
 .post-title {
-  font-size: 38px;
+  font-size: 25px;
   letter-spacing: -1px;
   line-height: 1; }
   @media screen and (max-width: 800px) {

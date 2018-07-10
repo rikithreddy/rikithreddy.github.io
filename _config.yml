@@ -3,8 +3,8 @@ title: Artificial Intelligence
 tagline: "Solve intelligence and then use intelligence to solve everything else"
 author: Rikith Reddy
 email: rikith.legend@gmail.com
-description: "Freshman21 is a Jekyll blog theme." # You can edit this line in _config.yml. It will appear in your document head meta and in your feed.xml site description
-keywords: "Jekyll, theme, Freshman21"
+description: "Human mind and its cognition have always been facinating elements the blog tries to give an understanding of it" # You can edit this line in _config.yml. It will appear in your document head meta and in your feed.xml site description
+keywords: "Brain, Cognition, Intelligence, Motivation, Control, AI"
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://rikithreddy.github.io/" # the base hostname & protocol for your site
 locale: en_US
@@ -15,7 +15,7 @@ locale: en_US
 github_username:  rikithreddy
 #disqus_shortname: freshman21
 favicon:     "/images/favicon.ico"
-aboutme: Hi, this is Rikith Reddy. I am a research enhusiast keen in the topics AI and Machine Learning, my blog show some of the really cool stuff one can do with Machine learning. Please enjoy it. # these are shown on aboutme-sidebar.
+aboutme: Hi, this is Rikith Reddy. I am a research enthusiast keen in the topics AI and Machine Learning, You can find amazing stuff about human mind in my blog. Please do enjoy it. # these are shown on aboutme-sidebar.
 aboutme_photo: "/images/121.jpg" # your photo.
 google_analytics_key: UA-57979084-1 # put YOUR key here to enable tracking! (blank to disable)
 
