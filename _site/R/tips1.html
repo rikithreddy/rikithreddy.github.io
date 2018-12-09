@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Filter unique values from a multivalued column in R « Rikith's Blog</title>
+  <meta name="description" content="Filter unique values from a multivalued column in RLook at the following datalibrary(tidyverse)df &lt;- read.csv('../data/books.csv')temp &lt;- df %&gt;%    ...">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://localhost:4000/R/tips1">
+  <link rel="alternate" type="application/rss+xml" title="Rikith's Blog" href="http://localhost:4000/feed.xml" />
+</head>
+
+
+  <body>
+
+    <div class="header-placeholder"></div>
+<header class="header">
+  <div class="wrapper">
+    <div id="sidebar-toggle">TOC</div>
+    <a class="site-title" href="/">Rikith's Blog</a>
+    <nav class="site-nav">
+      
+        
+        <a class="page-link" href="/about/">About</a>
+      
+        
+        <a class="page-link" href="/category/">Category</a>
+      
+        
+        <a class="page-link" href="/resume/">Resume</a>
+      
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="col-main">
+          <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Filter unique values from a multivalued column in R</h1>
+    <p class="post-meta">Dec 30, 2014</p>
+  </header>
+
+  <article class="post-content">
+    <h1 id="filter-unique-values-from-a-multivalued-column-in-r">Filter unique values from a multivalued column in R</h1>
+
+<p>Look at the following data</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">tidyverse</span><span class="p">)</span><span class="w">
+</span><span class="n">df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">read.csv</span><span class="p">(</span><span class="s1">'../data/books.csv'</span><span class="p">)</span><span class="w">
+</span><span class="n">temp</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">df</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> 
+        </span><span class="n">select</span><span class="p">(</span><span class="n">original_title</span><span class="p">,</span><span class="n">authors</span><span class="p">)</span><span class="w">
+</span><span class="n">head</span><span class="p">(</span><span class="n">temp</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>##                             original_title                     authors
+## 1                         The Hunger Games             Suzanne Collins
+## 2 Harry Potter and the Philosopher's Stone J.K. Rowling, Mary GrandPré
+## 3                                 Twilight             Stephenie Meyer
+## 4                    To Kill a Mockingbird                  Harper Lee
+## 5                         The Great Gatsby         F. Scott Fitzgerald
+## 6                   The Fault in Our Stars                  John Green
+</code></pre></div></div>
+
+<p>Lets say you want to pull out all names of unique authors from the dataframe. Notice that the column authors is multivalued for the book Harry Potter and the Philosophers Stone, hence we need to first convert the column into a single valued and then find all unique elements in them. The function <code class="highlighter-rouge">separate_rows</code> can be used to make single valued rows from a multi-valued rows.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">temp</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">separate_rows</span><span class="p">(</span><span class="n">df</span><span class="p">,</span><span class="n">authors</span><span class="p">,</span><span class="n">sep</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">','</span><span class="p">)</span><span class="w"> 
+</span><span class="n">head</span><span class="p">(</span><span class="n">temp</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">select</span><span class="p">(</span><span class="n">original_title</span><span class="p">,</span><span class="n">authors</span><span class="p">))</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>##                             original_title             authors
+## 1                         The Hunger Games     Suzanne Collins
+## 2 Harry Potter and the Philosopher's Stone        J.K. Rowling
+## 3 Harry Potter and the Philosopher's Stone       Mary GrandPré
+## 4                                 Twilight     Stephenie Meyer
+## 5                    To Kill a Mockingbird          Harper Lee
+## 6                         The Great Gatsby F. Scott Fitzgerald
+</code></pre></div></div>
+
+<p>Notice that there are no multivalued values in authors column, the authours of Harry Potter have been seperated as two different rows. Now we can use the <code class="highlighter-rouge">unique</code> function to find all the unique authors for the dataset.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">unique_authors</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">unique</span><span class="p">(</span><span class="n">temp</span><span class="o">$</span><span class="n">authors</span><span class="p">)</span><span class="w">
+</span><span class="n">unique_authors</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## [1] "J.K. Rowling"
+</code></pre></div></div>
+
+<p>Further performing operations like finding all books of the author</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> 
+  </span><span class="n">filter</span><span class="p">(</span><span class="n">grepl</span><span class="p">(</span><span class="n">unique_authors</span><span class="p">[</span><span class="m">2</span><span class="p">],</span><span class="w"> </span><span class="n">authors</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">select</span><span class="p">(</span><span class="n">authors</span><span class="p">,</span><span class="n">original_title</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">head</span><span class="p">()</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>##                                   authors
+## 1             J.K. Rowling, Mary GrandPré
+## 2 J.K. Rowling, Mary GrandPré, Rufus Beck
+## 3             J.K. Rowling, Mary GrandPré
+## 4             J.K. Rowling, Mary GrandPré
+## 5             J.K. Rowling, Mary GrandPré
+## 6             J.K. Rowling, Mary GrandPré
+##                              original_title
+## 1  Harry Potter and the Philosopher's Stone
+## 2  Harry Potter and the Prisoner of Azkaban
+## 3 Harry Potter and the Order of the Phoenix
+## 4   Harry Potter and the Chamber of Secrets
+## 5       Harry Potter and the Goblet of Fire
+## 6      Harry Potter and the Deathly Hallows
+</code></pre></div></div>
+
+  </article>
+  
+  
+
+
+
+
+</div>
+
+        </div>
+        <div class="col-second">
+          <div class="col-box col-box-author">
+  <img class="avatar" src="http://rikithreddy.github.io/assets/images/profile.JPG" alt="Rikith Reddy">
+  <div class="col-box-title name">Rikith Reddy</div>
+  <p>Solve intelligence and then use intelligence to solve everything else</p>
+  <p class="contact">
+    
+    <a href="https://github.com/rikithreddy">GitHub</a>
+    
+    
+    
+    <a href="mailto:rikith.legend@gmail.com">Email</a>
+    
+    <a href="https://github.com/rikithreddy">GitHub</a>
+    
+  </p>
+</div>
+
+<div class="col-box">
+  <div class="col-box-title">Newest Posts</div>
+  <ul class="post-list">
+    
+      <li><a class="post-link" href="/R/tips1">Filter unique values from a multivalued column in R</a></li>
+    
+      <li><a class="post-link" href="/archivers/test">Kiss of Death</a></li>
+    
+  </ul>
+</div>
+
+<div class="col-box post-toc hide">
+  <div class="col-box-title">TOC</div>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+<div class="wrapper">
+&copy; 2018 Rikith Reddy
+</div>
+</footer>
+
+<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});</script>
+<script src="/js/easybook.js"></script>
+
+
+  </body>
+
+</html>

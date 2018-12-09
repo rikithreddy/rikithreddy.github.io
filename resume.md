@@ -1,10 +1,10 @@
 ---
 layout: page
-title: About
+title: Resume
 permalink: /resume/
 ---
 
-Johnny Coder
+Rikith Reddy
 ============
 
 
