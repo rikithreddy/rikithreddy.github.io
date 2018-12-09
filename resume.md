@@ -11,17 +11,26 @@ Rikith Reddy
 Education
 ---------
 
-2010-2014 (expected)
-:   **PhD, Computer Science**; Awesome University (MyTown)
+2014–2018
+:   **Bachelors of Technology**:   Indian Institute of Information Technology Guwahati, Assam
+    Major Computer Science Engineering.
+    CGPA-9.41
 
-    *Thesis title: Deep Learning Approaches to the Self-Awesomeness
-     Estimation Problem*
+2012–2014
+:   **Senior Secondary**: Narayana Junior College Bowenpally, Hyderabad, Telangana
+    Percentage - 92.6%
 
-2007-2010
-:   **BSc, Computer Science and Electrical Engineering**; University of
-    HomeTown (HomeTown)
+2000-2012
+:   **High School**: St. Andrews High School Bowenpally, Hyderabad, Telangana
+    GPA - 8.8
 
-    *Minor: Awesomeology*
+
+
+Publications
+----------
+2017
+:   **Candid with YouTube: Adaptive Streaming Behavior and Implications on Data Consumption**;  
+
 
 Experience
 ----------
