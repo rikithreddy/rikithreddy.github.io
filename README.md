@@ -22,8 +22,11 @@ Jekyll depends on Ruby run the following command to install the dependency
 Paste the essentials in .bashrc which would help keep gem settings each time 
 
 `echo '# Install Ruby Gems to ~/gems' >> ~/.bashrc
+
 echo 'export GEM_HOME=$HOME/gems' >> ~/.bashrc
+
 echo 'export PATH=$HOME/gems/bin:$PATH' >> ~/.bashrc
+
 source ~/.bashrc`
 
 
