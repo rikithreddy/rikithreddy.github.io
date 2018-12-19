@@ -41,6 +41,8 @@ Run the following command to install jekyll on your machine
 
 Run the following command to install all other dependencies which will be required for running the app
 
+`cd /path/to/repo/`
+`bundle install`
 
 ### Running Application 
 
