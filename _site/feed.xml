@@ -6,16 +6,16 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 09 Dec 2018 23:58:24 +0530</pubDate>
-    <lastBuildDate>Sun, 09 Dec 2018 23:58:24 +0530</lastBuildDate>
+    <pubDate>Wed, 19 Dec 2018 23:32:34 +0530</pubDate>
+    <lastBuildDate>Wed, 19 Dec 2018 23:32:34 +0530</lastBuildDate>
     <generator>Jekyll v3.7.4</generator>
     
       <item>
         <title>Filtering unique values from multivalued fields- R tips #1</title>
-        <description>&lt;p&gt;R is one of the most commonly used languages for data science. The following series of blogs would be giving some useful tips and tricks to use R more effectively. This post would cover a really simple tip to deal with multivalued fields. Multivalued fields are fields in a data record which hold multiple values of the same.
+        <description>&lt;p&gt;This blog post is the first of a series of blog I would be writing. This series would be covering various tips and tricks for using R language efficently. This post would cover a really simple tip to deal with multivalued fields. Multivalued fields are fields in a data record which hold multiple values of the same.
 attribute.&lt;/p&gt;
 
-&lt;p&gt;Below is an example of a similar situation I delt with recently while working with the &lt;a href=&quot;https://github.com/zygmuntz/goodbooks-10k&quot;&gt;goodreads 10k dataset&lt;/a&gt;. I wanted to find all unique authors that dataset had, However the books seemed to have multiple authors, &lt;em&gt;Harry Potter and the Philosopher’s Stone&lt;/em&gt; had two authors &lt;em&gt;J.K. Rowling&lt;/em&gt; and &lt;em&gt;Mary GrandPré&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Below is an example of a similar situation I delt with while working with the &lt;a href=&quot;https://github.com/zygmuntz/goodbooks-10k&quot;&gt;goodreads 10k dataset&lt;/a&gt;. The dataset is a csv file containing information of various books. I was intrested in finding all unique authors that dataset had, However the books seemed to have multiple authors. For example &lt;em&gt;Harry Potter and the Philosopher’s Stone&lt;/em&gt; had two authors &lt;em&gt;J.K. Rowling&lt;/em&gt; and &lt;em&gt;Mary GrandPré&lt;/em&gt;.&lt;/p&gt;
 
 &lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tidyverse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read.csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'../data/books.csv'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
@@ -64,7 +64,7 @@ attribute.&lt;/p&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;One method of getting all unique values from multivalued field is first converting the field into a single valued and then find all unique elements. In R we can perform the task by using the function &lt;code class=&quot;highlighter-rouge&quot;&gt;separate_rows()&lt;/code&gt;, this makes multiple single valued rows from a multi-valued row. Which is illustrated below.&lt;/p&gt;
+&lt;p&gt;Clearly the first task was to convert the multivalued field to a single valued field then find unique values of thoes single valued fields. In R we can perform the task by using the function &lt;code class=&quot;highlighter-rouge&quot;&gt;separate_rows()&lt;/code&gt;, the function when given a multivalued column in a dataframe seperates and converts all the multivalued attributes to multiple single valued attributes. Below is an illustration for the dataset.&lt;/p&gt;
 
 &lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;temp&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;separate_rows&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;authors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sep&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;','&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; 
 &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;temp&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&amp;gt;%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;select&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;original_title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;authors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
@@ -173,12 +173,108 @@ attribute.&lt;/p&gt;
 &lt;p&gt;You can find more such applications in my &lt;a href=&quot;https://github.com/rikithreddy/bookrecommender&quot;&gt;Analytics App&lt;/a&gt; for Good Reads Dataset in Shiny-R.&lt;/p&gt;
 
 </description>
-        <pubDate>Tue, 30 Dec 2014 14:30:13 +0530</pubDate>
+        <pubDate>Sun, 09 Dec 2018 17:30:13 +0530</pubDate>
         <link>http://localhost:4000/R/tips/1</link>
         <guid isPermaLink="true">http://localhost:4000/R/tips/1</guid>
         
         
         <category>R</category>
+        
+      </item>
+    
+      <item>
+        <title>R Tips 1.md</title>
+        <description>layout: post
+title:  &quot;Kiss of Death&quot;
+date:   2014-12-30 09:00:13
+categories: life
+permalink: /archivers/test
+Filter unique values from a multivalued column in R
+===================================================
+
+Look at the following data
+
+``` r
+library(tidyverse)
+```
+
+    ## ── Attaching packages ───────────────────────────────────────────────────────────────────────────────────────────── tidyverse 1.2.1 ──
+
+    ## ✔ ggplot2 3.1.0     ✔ purrr   0.2.5
+    ## ✔ tibble  1.4.2     ✔ dplyr   0.7.8
+    ## ✔ tidyr   0.8.2     ✔ stringr 1.3.1
+    ## ✔ readr   1.2.1     ✔ forcats 0.3.0
+
+    ## ── Conflicts ──────────────────────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
+    ## ✖ dplyr::filter() masks stats::filter()
+    ## ✖ dplyr::lag()    masks stats::lag()
+
+``` r
+df &lt;- read.csv('../data/books.csv')
+temp &lt;- df %&gt;% 
+        select(original_title,authors)
+head(temp)
+```
+
+    ##                             original_title                     authors
+    ## 1                         The Hunger Games             Suzanne Collins
+    ## 2 Harry Potter and the Philosopher's Stone J.K. Rowling, Mary GrandPré
+    ## 3                                 Twilight             Stephenie Meyer
+    ## 4                    To Kill a Mockingbird                  Harper Lee
+    ## 5                         The Great Gatsby         F. Scott Fitzgerald
+    ## 6                   The Fault in Our Stars                  John Green
+
+Lets say you want to pull out all names of unique authors from the dataframe. Notice that the column authors is multivalued for the book Harry Potter and the Philosophers Stone, hence we need to first convert the column into a single valued and then find all unique elements in them. The function `separate_rows` can be used to make single valued rows from a multi-valued rows.
+
+``` r
+temp &lt;- separate_rows(df,authors,sep = ',') 
+head(temp %&gt;% select(original_title,authors))
+```
+
+    ##                             original_title             authors
+    ## 1                         The Hunger Games     Suzanne Collins
+    ## 2 Harry Potter and the Philosopher's Stone        J.K. Rowling
+    ## 3 Harry Potter and the Philosopher's Stone       Mary GrandPré
+    ## 4                                 Twilight     Stephenie Meyer
+    ## 5                    To Kill a Mockingbird          Harper Lee
+    ## 6                         The Great Gatsby F. Scott Fitzgerald
+
+Notice that there are no multivalued values in authors column, the authours of Harry Potter have been seperated as two different rows. Now we can use the `unique` function to find all the unique authors for the dataset.
+
+``` r
+unique_authors &lt;- unique(temp$authors)
+unique_authors[2]
+```
+
+    ## [1] &quot;J.K. Rowling&quot;
+
+Further performing operations like finding all books of the author
+
+``` r
+df %&gt;% 
+  filter(grepl(unique_authors[2], authors)) %&gt;%
+  select(authors,original_title) %&gt;% head()
+```
+
+    ##                                   authors
+    ## 1             J.K. Rowling, Mary GrandPré
+    ## 2 J.K. Rowling, Mary GrandPré, Rufus Beck
+    ## 3             J.K. Rowling, Mary GrandPré
+    ## 4             J.K. Rowling, Mary GrandPré
+    ## 5             J.K. Rowling, Mary GrandPré
+    ## 6             J.K. Rowling, Mary GrandPré
+    ##                              original_title
+    ## 1  Harry Potter and the Philosopher's Stone
+    ## 2  Harry Potter and the Prisoner of Azkaban
+    ## 3 Harry Potter and the Order of the Phoenix
+    ## 4   Harry Potter and the Chamber of Secrets
+    ## 5       Harry Potter and the Goblet of Fire
+    ## 6      Harry Potter and the Deathly Hallows
+</description>
+        <pubDate>Sun, 09 Dec 2018 00:00:00 +0530</pubDate>
+        <link>http://localhost:4000/archivers/R-tips-1.md</link>
+        <guid isPermaLink="true">http://localhost:4000/archivers/R-tips-1.md</guid>
+        
         
       </item>
     

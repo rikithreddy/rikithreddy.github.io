@@ -26,7 +26,7 @@ header:
   links:             # Links on the header. Link to in-site page with a slash as prefix
     About: /about/
     Category: /category/
-    Resume: /resume/   
+#    Resume: /resume/   
 
 permalink: /archivers/:title
 plugins:

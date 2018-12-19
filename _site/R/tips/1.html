@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Filtering unique values from multivalued fields- R tips #1 « Rikith's Blog</title>
-  <meta name="description" content="R is one of the most commonly used languages for data science. The following series of blogs would be giving some useful tips and tricks to use R more effect...">
+  <meta name="description" content="This blog post is the first of a series of blog I would be writing. This series would be covering various tips and tricks for using R language efficently. Th...">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="http://localhost:4000/R/tips/1">
@@ -30,9 +30,6 @@
         
         <a class="page-link" href="/category/">Category</a>
       
-        
-        <a class="page-link" href="/resume/">Resume</a>
-      
     </nav>
   </div>
 </header>
@@ -45,14 +42,14 @@
 
   <header class="post-header">
     <h1 class="post-title">Filtering unique values from multivalued fields- R tips #1</h1>
-    <p class="post-meta">Dec 30, 2014</p>
+    <p class="post-meta">Dec 9, 2018</p>
   </header>
 
   <article class="post-content">
-    <p>R is one of the most commonly used languages for data science. The following series of blogs would be giving some useful tips and tricks to use R more effectively. This post would cover a really simple tip to deal with multivalued fields. Multivalued fields are fields in a data record which hold multiple values of the same.
+    <p>This blog post is the first of a series of blog I would be writing. This series would be covering various tips and tricks for using R language efficently. This post would cover a really simple tip to deal with multivalued fields. Multivalued fields are fields in a data record which hold multiple values of the same.
 attribute.</p>
 
-<p>Below is an example of a similar situation I delt with recently while working with the <a href="https://github.com/zygmuntz/goodbooks-10k">goodreads 10k dataset</a>. I wanted to find all unique authors that dataset had, However the books seemed to have multiple authors, <em>Harry Potter and the Philosopher’s Stone</em> had two authors <em>J.K. Rowling</em> and <em>Mary GrandPré</em>.</p>
+<p>Below is an example of a similar situation I delt with while working with the <a href="https://github.com/zygmuntz/goodbooks-10k">goodreads 10k dataset</a>. The dataset is a csv file containing information of various books. I was intrested in finding all unique authors that dataset had, However the books seemed to have multiple authors. For example <em>Harry Potter and the Philosopher’s Stone</em> had two authors <em>J.K. Rowling</em> and <em>Mary GrandPré</em>.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">tidyverse</span><span class="p">)</span><span class="w">
 </span><span class="n">df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">read.csv</span><span class="p">(</span><span class="s1">'../data/books.csv'</span><span class="p">)</span><span class="w">
@@ -101,7 +98,7 @@ attribute.</p>
   </tbody>
 </table>
 
-<p>One method of getting all unique values from multivalued field is first converting the field into a single valued and then find all unique elements. In R we can perform the task by using the function <code class="highlighter-rouge">separate_rows()</code>, this makes multiple single valued rows from a multi-valued row. Which is illustrated below.</p>
+<p>Clearly the first task was to convert the multivalued field to a single valued field then find unique values of thoes single valued fields. In R we can perform the task by using the function <code class="highlighter-rouge">separate_rows()</code>, the function when given a multivalued column in a dataframe seperates and converts all the multivalued attributes to multiple single valued attributes. Below is an illustration for the dataset.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">temp</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">separate_rows</span><span class="p">(</span><span class="n">df</span><span class="p">,</span><span class="n">authors</span><span class="p">,</span><span class="n">sep</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">','</span><span class="p">)</span><span class="w"> 
 </span><span class="n">head</span><span class="p">(</span><span class="n">temp</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">select</span><span class="p">(</span><span class="n">original_title</span><span class="p">,</span><span class="n">authors</span><span class="p">))</span><span class="w">
@@ -243,6 +240,8 @@ attribute.</p>
   <ul class="post-list">
     
       <li><a class="post-link" href="/R/tips/1">Filtering unique values from multivalued fields- R tips #1</a></li>
+    
+      <li><a class="post-link" href="/archivers/R-tips-1.md">R Tips 1.md</a></li>
     
   </ul>
 </div>
