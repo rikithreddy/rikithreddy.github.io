@@ -6,8 +6,8 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 19 Dec 2018 23:45:23 +0530</pubDate>
-    <lastBuildDate>Wed, 19 Dec 2018 23:45:23 +0530</lastBuildDate>
+    <pubDate>Tue, 25 Dec 2018 14:27:52 +0000</pubDate>
+    <lastBuildDate>Tue, 25 Dec 2018 14:27:52 +0000</lastBuildDate>
     <generator>Jekyll v3.7.4</generator>
     
       <item>
@@ -173,7 +173,7 @@ attribute.&lt;/p&gt;
 &lt;p&gt;You can find more such applications in my &lt;a href=&quot;https://github.com/rikithreddy/bookrecommender&quot;&gt;Analytics App&lt;/a&gt; for Good Reads Dataset in Shiny-R.&lt;/p&gt;
 
 </description>
-        <pubDate>Sun, 09 Dec 2018 17:30:13 +0530</pubDate>
+        <pubDate>Sun, 09 Dec 2018 12:00:13 +0000</pubDate>
         <link>http://localhost:4000/R/tips/1</link>
         <guid isPermaLink="true">http://localhost:4000/R/tips/1</guid>
         

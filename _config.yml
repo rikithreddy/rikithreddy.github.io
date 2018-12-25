@@ -27,7 +27,7 @@ header:
     About: /about/
     Category: /category/
 #    Resume: /resume/   
-
+    Projects: /projects/
 permalink: /archivers/:title
 plugins:
  - jekyll-paginate
