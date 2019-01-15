@@ -6,16 +6,16 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 09 Dec 2018 23:58:24 +0530</pubDate>
-    <lastBuildDate>Sun, 09 Dec 2018 23:58:24 +0530</lastBuildDate>
+    <pubDate>Tue, 25 Dec 2018 14:27:52 +0000</pubDate>
+    <lastBuildDate>Tue, 25 Dec 2018 14:27:52 +0000</lastBuildDate>
     <generator>Jekyll v3.7.4</generator>
     
       <item>
         <title>Filtering unique values from multivalued fields- R tips #1</title>
-        <description>&lt;p&gt;R is one of the most commonly used languages for data science. The following series of blogs would be giving some useful tips and tricks to use R more effectively. This post would cover a really simple tip to deal with multivalued fields. Multivalued fields are fields in a data record which hold multiple values of the same.
+        <description>&lt;p&gt;This blog post is the first of a series of blog I would be writing. This series would be covering various tips and tricks for using R language efficently. This post would cover a really simple tip to deal with multivalued fields. Multivalued fields are fields in a data record which hold multiple values of the same.
 attribute.&lt;/p&gt;
 
-&lt;p&gt;Below is an example of a similar situation I delt with recently while working with the &lt;a href=&quot;https://github.com/zygmuntz/goodbooks-10k&quot;&gt;goodreads 10k dataset&lt;/a&gt;. I wanted to find all unique authors that dataset had, However the books seemed to have multiple authors, &lt;em&gt;Harry Potter and the Philosopher’s Stone&lt;/em&gt; had two authors &lt;em&gt;J.K. Rowling&lt;/em&gt; and &lt;em&gt;Mary GrandPré&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Below is an example of a similar situation I delt with while working with the &lt;a href=&quot;https://github.com/zygmuntz/goodbooks-10k&quot;&gt;goodreads 10k dataset&lt;/a&gt;. The dataset is a csv file containing information of various books. I was intrested in finding all unique authors that dataset had, However the books seemed to have multiple authors. For example &lt;em&gt;Harry Potter and the Philosopher’s Stone&lt;/em&gt; had two authors &lt;em&gt;J.K. Rowling&lt;/em&gt; and &lt;em&gt;Mary GrandPré&lt;/em&gt;.&lt;/p&gt;
 
 &lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tidyverse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read.csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'../data/books.csv'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
@@ -64,7 +64,7 @@ attribute.&lt;/p&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;One method of getting all unique values from multivalued field is first converting the field into a single valued and then find all unique elements. In R we can perform the task by using the function &lt;code class=&quot;highlighter-rouge&quot;&gt;separate_rows()&lt;/code&gt;, this makes multiple single valued rows from a multi-valued row. Which is illustrated below.&lt;/p&gt;
+&lt;p&gt;Clearly the first task was to convert the multivalued field to a single valued field then find unique values of thoes single valued fields. In R we can perform the task by using the function &lt;code class=&quot;highlighter-rouge&quot;&gt;separate_rows()&lt;/code&gt;, the function when given a multivalued column in a dataframe seperates and converts all the multivalued attributes to multiple single valued attributes. Below is an illustration for the dataset.&lt;/p&gt;
 
 &lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;temp&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;separate_rows&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;authors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sep&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;','&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; 
 &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;temp&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&amp;gt;%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;select&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;original_title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;authors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
@@ -173,7 +173,7 @@ attribute.&lt;/p&gt;
 &lt;p&gt;You can find more such applications in my &lt;a href=&quot;https://github.com/rikithreddy/bookrecommender&quot;&gt;Analytics App&lt;/a&gt; for Good Reads Dataset in Shiny-R.&lt;/p&gt;
 
 </description>
-        <pubDate>Tue, 30 Dec 2014 14:30:13 +0530</pubDate>
+        <pubDate>Sun, 09 Dec 2018 12:00:13 +0000</pubDate>
         <link>http://localhost:4000/R/tips/1</link>
         <guid isPermaLink="true">http://localhost:4000/R/tips/1</guid>
         

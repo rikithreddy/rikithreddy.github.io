@@ -12,7 +12,7 @@ author: Rikith Reddy
 avatar: "http://rikithreddy.github.io/assets/images/profile.JPG"
 profile:  "Solve intelligence and then use intelligence to solve everything else"
 #twitter_username: twitter_username
-github_username:  rikithreddy
+#github_username:  rikithreddy
 profile_links:
   Email: "mailto:rikith.legend@gmail.com"
   GitHub: "https://github.com/rikithreddy"
@@ -26,8 +26,8 @@ header:
   links:             # Links on the header. Link to in-site page with a slash as prefix
     About: /about/
     Category: /category/
-    Resume: /resume/   
-
+#    Resume: /resume/   
+    Projects: /projects/
 permalink: /archivers/:title
 plugins:
  - jekyll-paginate
