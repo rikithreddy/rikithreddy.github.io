@@ -29,11 +29,11 @@ header:
 #    Resume: /resume/   
     Projects: /projects/
 permalink: /archivers/:title
-plugins:
+plugins_dir:
  - jekyll-paginate
  - jekyll-gist
  - jemoji
-
+ - jekyll-seo-tag
 # Build settings
 paginate: 5
 paginate_path: "page:num"
