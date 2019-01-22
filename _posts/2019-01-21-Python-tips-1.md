@@ -9,9 +9,11 @@ permalink: /python/tips/1
 
 
 
-Python has some really cool features. One of them is tuple assignment, which can be used to have multiple variables assigned in a single line. This feature does not only make it easier code but also makes the code more readable. It takes tuple of variables on LHS and assigns them with a tuple of elements *same size*, this operation is performed element wise.
+Python has many cool features. One of them is tuple assignment. This can be used to assign multiple variables in a single line. Not only making code more readable but also simple. The assignment follows simple mechanics where variables on LHS are assigned corresponding elements on RHS. One should also remember that the number of elements on LHS must be equal to RHS as the assignment is element-wise. 
 
-Consider the following example where you want to swap variables. A typical code would look as follows.
+## Example: Swapping Numbers
+
+A typical code for swapping two numbers would look something as shown below. It required creating a temporary variable and destroying it later. This is some tedious work.
 
 ```c
 temp = a
@@ -20,12 +22,17 @@ b = temp
 remove(temp)
 ```
 
-However we can achive the same in python in a single line. This is much more simpler and less tedious.
+The same thing can be achieved in python in a single line. 
 
 ```python
 a,b = b,a
 ```
-Swapping numbers is a simpler task check the code for calculating GCD using euclidean algorithm. Really cool isn't it.
+
+This makes the code lot more readable and easy to understand but also beautiful and simple. 
+
+
+## Example: GCD of two numbers
+Swapping numbers is a simple task. Consider code for Calculating GCD (using euclidean algorithm). 
 
 ``` python 
 def get_gcd(a,b)
@@ -33,14 +40,19 @@ def get_gcd(a,b)
 		a,b = b, a%b
 return b
 ```
+Really cool isn't it? 
 
-Some other cool uses:
-Unpacking a tuple data structure to indivisual variables 
+## Example: Unpacking from tuple data-structure
+
+You can also perform assignment as follows
 ```python
 name =(surya, prakash, rao)
 first_name,last_name,middle_name = name
 ```
-Slice assignment of lists
+
+## Example: Assign slices in a list
+
+We can go further and assign indivisual slices of a list as follows.
 
 ```python
 x = [1,2,3]
@@ -49,8 +61,18 @@ x[0:2] = y[0:2]
 
 # now x =[3,5,3]
 ```
+But be careful when your LHS size is not equal to RHS, it can lead to addition of an extra number which may not be intended. Its important to keep a note of this.
+```python
+x =[1,2,3]
+y = [3,5,6]
+x[0:1] =y[0:2]
 
-While the feature is really helpful people tend to make a common mistake shown below.
+# now x = [3,5,2,3]
+```
+
+## Common mistakes
+
+While the feature is really helpful, people tend to make some common mistakes. One of them is shown below. Where size on both sides is not equal so python is not able to unpack.
 
 ```python 
 temp = (1,2,3)
@@ -64,5 +86,10 @@ ValueError: too many values to unpack (expected 2)
 ```
 Always remember that you need to have equal number of elements on LHS and RHS to assign properly to avoid this mistake.
 
-Hope this helps you write better code in python :D
-HAPPY CODING!!
+
+Always remember *Zen of Python*:
+> Beautiful is better than ugly
+> Simple is better than complex
+> Readability counts
+> If the implementation is hard to explain, it's a bad idea. If the implementation is easy to explain, it may be a good idea.
+
