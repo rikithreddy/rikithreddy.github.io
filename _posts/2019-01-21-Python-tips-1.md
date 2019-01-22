@@ -92,8 +92,8 @@ Always remember that you need to have equal number of elements on LHS and RHS to
 ## Zen of Python
 
 Always remember *Zen of Python*:
-> Beautiful is better than ugly
-> Simple is better than complex
-> Readability counts
-> If the implementation is hard to explain, it's a bad idea. If the implementation is easy to explain, it may be a good idea.
+* Beautiful is better than ugly
+* Simple is better than complex
+* Readability counts
+* If the implementation is hard to explain, it's a bad idea. If the implementation is easy to explain, it may be a good idea.
 
