@@ -11,7 +11,9 @@ permalink: /python/tips/1
 
 Python has many cool features. One of them is tuple assignment. This can be used to assign multiple variables in a single line. Not only making code more readable but also simple. The assignment follows simple mechanics where variables on LHS are assigned corresponding elements on RHS. One should also remember that the number of elements on LHS must be equal to RHS as the assignment is element-wise. 
 
-## Example: Swapping Numbers
+## Examples: 
+
+### Swapping Numbers
 
 A typical code for swapping two numbers would look something as shown below. It required creating a temporary variable and destroying it later. This is some tedious work.
 
@@ -31,7 +33,7 @@ a,b = b,a
 This makes the code lot more readable and easy to understand but also beautiful and simple. 
 
 
-## Example: GCD of two numbers
+### GCD of two numbers
 Swapping numbers is a simple task. Consider code for Calculating GCD (using euclidean algorithm). 
 
 ``` python 
@@ -42,7 +44,7 @@ return b
 ```
 Really cool isn't it? 
 
-## Example: Unpacking from tuple data-structure
+### Unpacking from tuple data-structure
 
 You can also perform assignment as follows
 ```python
@@ -50,7 +52,7 @@ name =(surya, prakash, rao)
 first_name,last_name,middle_name = name
 ```
 
-## Example: Assign slices in a list
+### Assign slices in a list
 
 We can go further and assign indivisual slices of a list as follows.
 
@@ -86,6 +88,8 @@ ValueError: too many values to unpack (expected 2)
 ```
 Always remember that you need to have equal number of elements on LHS and RHS to assign properly to avoid this mistake.
 
+
+## Zen of Python
 
 Always remember *Zen of Python*:
 > Beautiful is better than ugly
