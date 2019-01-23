@@ -86,8 +86,7 @@ Traceback (most recent call last):
  File "<stdin>", line 1, in <module>
 ValueError: too many values to unpack (expected 2)
 ```
-Always remember that you need to have equal number of elements on LHS and RHS to assign properly to avoid this mistake.
-
+Always remember that you need to have equal number of elements on LHS and RHS to assign properly to avoid this mistake. Below are some tips from zen of python to write good code.
 
 ## Zen of Python
 
