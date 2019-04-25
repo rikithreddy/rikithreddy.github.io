@@ -13,7 +13,8 @@ Well this is my second attempt at the The Amir Khusro Challenge. In case you did
 `return, green, secure, narrow, stand-up, shield, glass`
 
 ## Challenge-2
+```
 The night king had truly returned. He brought the brutal winter and painted the once green lands of Westeros with exotic red and white. A Lord; A Lady; A King; The Iron Throne; nothing mattered now.  The thoughts flowed like a river through her, as she lay in her secure chamber across the narrow hallway. There was nothing to stand up against what was coming. Her shield, The mountain, once a terrifying monster, was now nothing more than a glass wall.
-
+```
 
 P.S: Season-8 episode 2 was the last episode aired before the post was written. (I case I ended up predicting something :p)
