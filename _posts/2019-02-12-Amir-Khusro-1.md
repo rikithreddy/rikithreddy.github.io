@@ -6,7 +6,9 @@ categories: short-stories
 permalink: /short-stories/amir-khusro-1
 ---
 
-``` Blog under construction```
+```
+ Blog under construction
+ ```
 
 Five word challenge
 
