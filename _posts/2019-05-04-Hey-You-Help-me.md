@@ -23,14 +23,14 @@ permalink: /short/meta/1
 "Come on now, what's with that smirk on your face? Get me there before someone things of something more crazy."<br><br>
 ...<br>
 ...<br>
-...<br>
+...<br><br>
 "Hey whats happening with me?"<br><br>
-...<br>
+...<br><br>
 "HEY!!!"<br><br>
-...<br>
+...<br><br>
 "Why do I feel all weird? Why did my right arm go all dusty? HEY WHATS HAPPENING?"<br><br>
-...<br>
+...<br><br>
 "HELP ME!!!"<br><br>
-...<br>
+...<br><br>
 "I don't good Mr. Wr.....<br><br>
 </p>
