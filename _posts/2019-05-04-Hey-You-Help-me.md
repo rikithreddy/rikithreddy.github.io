@@ -13,7 +13,7 @@ permalink: /short/meta/1
 "Well listen. I need your help and its kinda urgent. I'm here for a soul that was due last month."<br><br>
 "My guy made me travel 20 light years, all the way to Pune. There after that idiot has been drunk and blacked-out." <br><br>
 "Well I know what you are thinking. Why am I here?"<br><br>
-"I know you generally go to New York or San Francisco to find these alien guys. But I heard it was the idea of that lady over there. Well shes crazy! She gave ideas for people to break trops and all-and my guy ended up here."<br><br>
+"I know you generally go to New York or San Francisco to find these alien guys. But I heard it was the idea of that lady over there. Well shes crazy! She gave ideas for people to break tropes and all-and my guy ended up here."<br><br>
 "Don't you guys know that my life is hard as is? Why can't you guys write about a guy in his home planet doing all your funny business? Why should you bring him all the way to Earth everytime? And PUNE of all places! This traffic, these autowalas, this heat. How cruel can you guys be to me?"<br><br>
 "Well now, stop staring at me with that blank face. Help me find this purple guy. Be quick."<br><br>
 "HEY! WHAT THE HELL? This is crazy! Why does my guy have an infinity gauntlet, can't you'll let me have a normal life for once?"<br><br>
@@ -31,5 +31,5 @@ permalink: /short/meta/1
 ...<br><br>
 "HELP ME!!!"<br><br>
 ...<br><br>
-"I don't so good Mr. Wr.....<br><br>
+"I don't so feel good Mr. Wr.....<br><br>
 </p>
