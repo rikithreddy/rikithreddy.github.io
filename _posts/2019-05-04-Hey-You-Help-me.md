@@ -7,20 +7,21 @@ permalink: /short/meta/1
 ---
 <p align="center">
 "HEY YOU!" <br><br>
-"Yes you!"<br><br>
+"Yes, you!"<br><br>
 "What's with that funny look on your face? Din't you already know that I could speak?"<br><br>
 "Yeah! Yeah! I know its not Halloween and I ain't any maniac. In fact I don't even like wearing this black hoodie and all."<br><br>
 "You are the ones who have been making me wear this for years. I can't seem to find a reason why you'll do so. Well tell me what's the point of this scythe you make me carry around?"<br><br>
 "Well listen. I need your help and its kinda urgent."<br><br>
 "I'm here for a soul that was due last month."<br><br>
-"My guy made me travel 20 light years, all the way to Pune. There after that idiot has been drunk and blacked." <br><br>
+"My guy made me travel 20 light years, all the way to Pune. There after that idiot has been drunk and blacked-out." <br><br>
 "Well I know what you are thinking. Why am I here?"<br><br>
-"I know you generally go to New York or San Francisco to find these alien guys. But I heard it was the idea of that lady over there. Well shes crazy! Let her break all the trops whe wants but why bring my guy all the way here."<br><br>
-"Don't you guys think my life is hard as is? Why can't you guys write about a guy in his home planet doing all your funny business? Why should you bring him all the way to Earth? And PUNE of all places! This traffic, these autowalas and this heat how cruel can you guys be to me."<br><br>
+"I know you generally go to New York or San Francisco to find these alien guys. But I heard it was the idea of that lady over there. Well shes crazy! She gave ideas for people to break trops and all---and my guy ended up here."<br><br>
+"Don't you guys know that my life is hard as is? Why can't you guys write about a guy in his home planet doing all your funny business? Why should you bring him all the way to Earth everytime? And PUNE of all places! This traffic, these autowalas and this heat. How cruel can you guys be to me."<br><br>
 "Well now, stop staring at me with that blank face. Help me find this purple guy. Be quick."<br><br>
-"HEY! WHAT THE HELL? This is crazy! Why does my guy have an infinity gauntlet? Why don't you'll let me have a normal life?"<br><br>
-"And where is this Wakanda thing? Okay, now I haven't got any time to waste. Get me there, quick."<br><br>
-"Come on now, what's with that smirk on your face? Get me there before someone things of something more crazy."<br><br>
+"HEY! WHAT THE HELL? This is crazy! Why does my guy have an infinity gauntlet, can't you'll let me have a normal life for once?"<br><br>
+"And where is this Wakanda thing?"<br><br>
+"Okay, now I haven't got any time to waste. Get me there, quick."<br><br>
+"Come on now, what's with that smirk on your face? Get me there before someone thinks of something crazy."<br><br>
 ...<br>
 ...<br>
 ...<br><br>
