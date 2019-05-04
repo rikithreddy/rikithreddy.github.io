@@ -2,7 +2,7 @@
 layout: post
 title:  Hey you! Help me.
 date:   2019-05-04 12:00:00
-categories: meta-fiction
+categories: short-stories
 permalink: /short/meta/1
 ---
 <p align="center">
