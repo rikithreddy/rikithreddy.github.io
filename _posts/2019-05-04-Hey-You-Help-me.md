@@ -9,8 +9,7 @@ permalink: /short/meta/1
 "HEY YOU!" <br><br>
 "Yes, you!"<br><br>
 "What's with that funny look on your face? Din't you already know that I could speak?"<br><br>
-"Yeah! Yeah! I know its not Halloween and I ain't any maniac dressed like this. In fact I don't even like wearing this black hoodie and all. Its all so creepy."<br><br>
-"You guys have been making me wear this for years now. I can't seem to find a reason why you'll do so. Well tell me what's the point of this scythe you make me carry around, stupid isn't it?"<br><br>
+"Yeah! Yeah! I know its not Halloween and I ain't any maniac dressed like this. In fact I don't even like wearing this black hoodie and all. Its all so creepy. You guys have been making me wear this for years now. I can't seem to find a reason why you'll do so. Well tell me what's the point of this scythe you make me carry around, stupid isn't it?"<br><br>
 "Well listen. I need your help and its kinda urgent."<br><br>
 "I'm here for a soul that was due last month."<br><br>
 "My guy made me travel 20 light years, all the way to Pune. There after that idiot has been drunk and blacked-out." <br><br>
